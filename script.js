@@ -44,7 +44,14 @@ ALLERASER.addEventListener('click', () => {
 
 document.querySelector('.share').addEventListener('click', () => {
 	let title = prompt('タイトルは何にしますか？');
-	
+
+	if(title === null) {
+		alert('キャンセルされました。');
+		return;
+	} else {
+		const encodeTitle = encodeURI('『' + title + '』');
+		open(`https://twitter.com/intent/tweet?text=${encodeTitle}https://twitter.com/intent/tweet?text=%E3%82%92%E6%8F%8F%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0A%E2%80%BB%E7%94%BB%E5%83%8F%E3%82%92%E6%89%8B%E5%8B%95%E3%81%A7%E8%BF%BD%E5%8A%A0%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0A%0A%E3%81%8A%E3%81%88%E3%81%8B%E3%81%8D%E3%81%BD%E3%81%84%EF%BC%81%EF%BD%9Chttps%3A%2F%2Fharuka-nakatsuji.github.io%2Foekakipoi%2F%0A%23%E3%81%8A%E3%81%88%E3%81%8B%E3%81%8D%E3%81%BD%E3%81%84`, '_blank');
+	}
 });
 
 function changeActive() {
@@ -110,6 +117,6 @@ function draw(){
 function keyPressed() {
 	if (key == 's'){
 		saveCanvas('oekakipoi', 'jpg');
-		
+		console.log(saveCanvas());
 	}
 }
