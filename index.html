@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<title>おえかきぽい！｜さっと描いてさっとシェアするだけのサイト</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+	<header class="title">
+		<h1><img src="images/oekaki-logo.png" alt="おえかきぽい！"></h1>
+		<div class="header-right">
+			<p class="comment">「<span>s</span>」キーをおすと、イラストが保存されるよ！</p>
+			<a class="share"><img src="images/share.png" alt="ツイッターでシェア"></a>
+		</div>
+	</header>
+	<div class="menu">
+		<button id="pen"><img src="images/pen.png" alt="えんぴつ"></button>
+		<button id="eraser"><img src="images/eraser.png" alt="けしごむ"></button>
+		<div class="color-wrap">
+			<input type="color" id="color">
+			<img src="images/color.png" alt="いろ">
+		</div>
+		<div class="size-wrap">
+			<select id="size">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10" selected>10</option>
+				<option value="13">13</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+			</select>
+			<img src="images/size.png" alt="さいず">
+		</div>
+		<button id="alleraser"><img src="images/zenkeshi.png" alt="ぜんけし"></button>
+	</div>
+	<div class="canvas">
+		<div id="canvas__inner"></div>
+	</div>
+</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

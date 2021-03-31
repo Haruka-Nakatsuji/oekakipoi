@@ -1,0 +1,144 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Kosugi Maru', sans-serif;
+	font-weight: bold;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	grid-template-rows: 80px 1fr;
+	grid-template-areas: 
+		"header header"
+		"menu canvas"
+	;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-area: header;
+	padding: 10px;
+	border-bottom: 3px solid #66382B;
+	background: #fff;
+}
+
+h1 {
+	height: 100%;
+	margin: 0;
+	padding-left: 2%;
+}
+
+h1 img {
+	width: auto;
+	height: 100%;
+}
+
+.header-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+	color: #4b4b4b;
+}
+
+.comment {
+	margin: 2rem;
+}
+
+.comment span {
+	color: #6EC408;
+}
+
+.share {
+	margin-right: 4%;
+	transition: .15s;
+	cursor: pointer;
+}
+
+.share:hover {
+	opacity: .6;
+}
+
+.menu {
+	grid-area: menu;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #ddd;
+	z-index: 99;
+	text-align: center;
+}
+
+button:hover {
+	background: #bbb;
+}
+
+button {
+	border-radius: 10px;
+	transition: .15s;
+}
+
+button img {
+	width: 80%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.active {
+	background: #ccc;
+}
+
+#color:hover {
+	background: #bbb;
+}
+
+#color {
+	width: 100px;
+	height: 100px;
+	padding: 2px 4px;
+	border: 5px solid #fff;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: .15s;
+}
+
+.size-wrap {
+	font-size: 32px;
+	color: #4b4b4b;
+}
+
+#size {
+	padding: 15px;
+	border-radius: 50%;
+	background: #ffffff;
+	cursor: pointer;
+	transition: .3s;
+}
+
+#size:hover {
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, .5) inset;
+}
+
+.canvas {
+	grid-area: canvas;
+	overflow: scroll;
+	height: calc(100vh - 80px);
+
+	scrollbar-width: thin;
+    scrollbar-color: #f3f0dd #66382B;/*fancy colors for Firefox*/
+}
+
+div::-webkit-scrollbar {
+  width: 16px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #f3f0dd;
+  border-radius: 10px;
+  border: 3px solid #66382B;
+}
