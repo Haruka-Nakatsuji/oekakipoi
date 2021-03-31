@@ -117,6 +117,5 @@ function draw(){
 function keyPressed() {
 	if (key == 's'){
 		saveCanvas('oekakipoi', 'jpg');
-		console.log(saveCanvas());
 	}
 }
