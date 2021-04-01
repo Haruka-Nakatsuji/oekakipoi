@@ -119,3 +119,13 @@ function keyPressed() {
 		saveCanvas('oekakipoi', 'jpg');
 	}
 }
+
+(function() {
+	// スクロールを禁止する関数です！！！
+	function noScroll(event) {
+		event.preventDefault();
+	}
+   // passive:falseは必要！
+	document.addEventListener('touchmove', noScroll, { passive: false });
+	document.addEventListener('mousewheel', noScroll, { passive: false });
+})();
